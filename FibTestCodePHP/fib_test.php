@@ -29,4 +29,16 @@ class FibTest extends PHPUnit_Framework_TestCase
     $r   = $fib->fib(7);
     $this->assertEquals(13, $r);
   }
+  public function testFibNull()
+  {
+    $fib = new fibClass;
+    $r   = $fib->fib();
+    $this->assertNull($r);
+  }
+  public function testFibMinus()
+  {
+    $fib = new fibClass;
+    $r   = $fib->fib(-1);
+    $this->assertNull($r);
+  }
 }
